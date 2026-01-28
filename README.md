@@ -64,3 +64,15 @@ Using the **BloodMNIST** dataset (8 blood cell classes), we analyze how **cell m
 ## Dataset
 
 - BloodMNIST (MedMNIST collection)
+
+---
+
+## Related Publication
+
+This repository accompanies the paper:
+
+**Color-guided Mixture-of-Experts Conditional GAN for Realistic Biomedical Image Synthesis in Data-Scarce Diagnostics**
+
+🖋 Patrycja Kwiek · Filip Ciepiela · Małgorzata Jakubowska  
+📚 *Electronics*, 2025 — Vol. 14(14), Art. 2773  
+🔗 ISSN: 2079-9292
