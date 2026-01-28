@@ -1,5 +1,66 @@
-This study addresses the challenge of generating biomedical data when available samples are insufficient for multivariate modeling in machine learning and deep learning. Using microscopic images of eight peripheral blood cell classes from the BloodMNIST database, the research highlights the importance of both cell morphology and RGB color distribution in classification.  
+# Color Me Synthetic
+Generating Peripheral Blood Cells with Conditional GANs
 
-Color differentiation was initially assessed through histograms and the k-means algorithm, identifying six dominant colors. Further analysis using UMAP and distance matrices revealed that the blue component had minimal impact and could be excluded from the loss function.  
+When biomedical data is scarce, deep models still want more.
 
-For data generation, various conditional Generative Adversarial Networks (cGAN) architectures were tested. The Mixture-of-Experts cGAN, incorporating residual blocks and LeakyReLU activation, yielded the best results, achieving a classification accuracy of 0.97 for newly generated data. However, high class similarity, as shown by statistical and unsupervised analyses, led to some classification errors in synthetic images.
+---
+
+## What This Is
+
+This project tackles **biomedical data scarcity** by generating synthetic microscopic images of peripheral blood cells using **conditional GANs (cGANs)**.
+
+Using the **BloodMNIST** dataset (8 blood cell classes), we analyze how **cell morphology and RGB color distribution** contribute to classification — and how synthetic data can be generated without breaking biological plausibility.
+
+---
+
+## What It Does
+
+- Analyzes **color distributions** using histograms and **k-means clustering**
+- Identifies **dominant color components** (spoiler: blue barely matters)
+- Uses **UMAP** and distance matrices to study class similarity
+- Trains and compares multiple **conditional GAN architectures**
+- Generates synthetic blood cell images for data augmentation
+- Evaluates classification performance on generated data
+
+---
+
+## Key Findings
+
+- Six dominant colors capture most chromatic information
+- The **blue channel contributes minimally** and can be excluded from the loss
+- High inter-class similarity limits perfect synthesis
+- A **Mixture-of-Experts cGAN** with residual blocks and LeakyReLU performs best
+- Synthetic data achieves **classification accuracy up to 0.97**
+
+---
+
+## Model Highlights
+
+- Conditional GANs (baseline + variants)
+- **Mixture-of-Experts cGAN**
+- Residual blocks
+- LeakyReLU activations
+- Class-conditional image generation
+
+---
+
+## Why It Matters
+
+- Medical datasets are small, imbalanced, and expensive
+- Synthetic data can **boost training** when real samples are limited
+- Color and morphology matter — but not equally
+- Helps understand **what models actually learn** from biomedical images
+
+---
+
+## Notes
+
+- Some misclassifications persist due to **high biological similarity**
+- Designed for **analysis and insight**, not photorealistic perfection
+- Best used as a **data augmentation and exploratory tool**
+
+---
+
+## Dataset
+
+- BloodMNIST (MedMNIST collection)
